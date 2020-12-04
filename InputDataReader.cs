@@ -12,14 +12,19 @@ namespace AdventOfCode2020
         private readonly static string inputDataFolderPath =
             Path.Combine(new DirectoryInfo(AppDomain.CurrentDomain.BaseDirectory).FullName, "InputData");
 
-        public async static Task<IEnumerable<T>> GetInputDataAsync<T>(string fileName, string delimiter = "\n")
+        public async static Task<IEnumerable<T>> GetInputDataAsync<T>(string fileName, string delimiter = "\n", bool trimEmptyLastLine = true)
         {
             string filePath = Path.Combine(inputDataFolderPath, fileName);
 
-            return (await File.ReadAllTextAsync(filePath))
-                .Split(delimiter)
-                .Where(line => !string.IsNullOrWhiteSpace(line))
-                .Select(Convert<T>);
+            var lines = (await File.ReadAllTextAsync(filePath))
+                .Split(delimiter).ToList();
+
+            if (trimEmptyLastLine && string.IsNullOrWhiteSpace(lines.Last()))
+            {
+                lines.RemoveAt(lines.Count - 1);
+            }
+
+            return lines.Select(Convert<T>);
         }
 
         static T Convert<T>(string value)
