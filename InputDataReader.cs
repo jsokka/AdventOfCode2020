@@ -30,7 +30,7 @@ namespace AdventOfCode2020
         static T Convert<T>(string value)
         {
             var convertedValue = TypeDescriptor.GetConverter(typeof(T));
-            return (T)convertedValue.ConvertFromInvariantString(value);
+            return (T)convertedValue.ConvertFromInvariantString(value.Trim());
         }
     }
 }
