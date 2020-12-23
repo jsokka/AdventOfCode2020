@@ -9,7 +9,7 @@ namespace AdventOfCode2020.Puzzles
     {
         public async Task Solve()
         {
-            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day11_1.txt"))
+            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day11.txt"))
                 .Select(c => c.ToCharArray()).ToList();
 
             Part1(inputData);

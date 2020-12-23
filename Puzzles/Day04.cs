@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Day4 : IPuzzle
+    public class Day04 : IPuzzle
     {
         private readonly Dictionary<string, Func<string, bool>> requiredFields
             = new Dictionary<string, Func<string, bool>>
@@ -32,7 +32,7 @@ namespace AdventOfCode2020.Puzzles
 
         private static async Task<IEnumerable<string>> GetInputData()
         {
-            var inputData = await InputDataReader.GetInputDataAsync<string>("Day4_1.txt");
+            var inputData = await InputDataReader.GetInputDataAsync<string>("Day04.txt");
             var emptyLines = inputData.Count(l => string.IsNullOrWhiteSpace(l));
             var cleanedInputData = new List<string>();
             var newRow = string.Empty;

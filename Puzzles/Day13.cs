@@ -9,7 +9,7 @@ namespace AdventOfCode2020.Puzzles
     {
         public async Task Solve()
         {
-            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day13_1.txt")).ToList();
+            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day13.txt")).ToList();
 
             var earliestTime = int.Parse(inputData[0]);
             var busses = inputData[1].Split(',')

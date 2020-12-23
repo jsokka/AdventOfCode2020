@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Day6 : IPuzzle
+    public class Day06 : IPuzzle
     {
         public async Task Solve()
         {
@@ -17,7 +17,7 @@ namespace AdventOfCode2020.Puzzles
 
         private async Task<IEnumerable<string>> GetInputData()
         {
-            var inputData = await InputDataReader.GetInputDataAsync<string>("Day6_1.txt");
+            var inputData = await InputDataReader.GetInputDataAsync<string>("Day06.txt");
             var cleanedInputData = new List<string>();
             var newRow = string.Empty;
 

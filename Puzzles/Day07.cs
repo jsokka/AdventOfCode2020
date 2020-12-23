@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Day7 : IPuzzle
+    public class Day07 : IPuzzle
     {
         private Dictionary<string, Dictionary<string, int>> bags;
 
@@ -20,7 +20,7 @@ namespace AdventOfCode2020.Puzzles
 
         private static async Task<Dictionary<string, Dictionary<string, int>>> GetInputData()
         {
-            var inputData = await InputDataReader.GetInputDataAsync<string>("Day7_1.txt");
+            var inputData = await InputDataReader.GetInputDataAsync<string>("Day07.txt");
 
             var outerMostBagRegex = new Regex(@"^\w+ \w+");
             var innerBagsRegex = new Regex(@"([0-9]) (\w+ \w+) bag");

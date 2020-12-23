@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Day3 : IPuzzle
+    public class Day03 : IPuzzle
     {
         private record Move(int Right, int Down);
 
@@ -14,7 +14,7 @@ namespace AdventOfCode2020.Puzzles
 
         public async Task Solve()
         {
-            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day3_1.txt")).ToList();
+            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day03.txt")).ToList();
 
             columnCount = inputData[0].Length;
             rowCount = inputData.Count;

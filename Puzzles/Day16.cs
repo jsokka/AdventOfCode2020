@@ -11,7 +11,7 @@ namespace AdventOfCode2020.Puzzles
 
         public async Task Solve()
         {
-            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day16_1.txt")).ToList();
+            var inputData = (await InputDataReader.GetInputDataAsync<string>("Day16.txt")).ToList();
 
             var fields = ParseFields(inputData).ToList();
             var nearbyTickets = ParseNearbyTickets(inputData).ToList();

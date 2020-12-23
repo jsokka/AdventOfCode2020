@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Puzzles
 {
-    public class Day5 : IPuzzle
+    public class Day05 : IPuzzle
     {
         private record Seat(int Row, int Column, int Id);
 
         public async Task Solve()
         {
-            var inputData = await InputDataReader.GetInputDataAsync<string>("Day5_1.txt");
+            var inputData = await InputDataReader.GetInputDataAsync<string>("Day05.txt");
 
             Part1(inputData);
             Part2(inputData);

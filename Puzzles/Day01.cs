@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2020.Puzzles
 {
-    internal class Day1 : IPuzzle
+    internal class Day01 : IPuzzle
     {
         public async Task Solve()
         {
-            var inputData = await InputDataReader.GetInputDataAsync<int>("Day1_1.txt");
+            var inputData = await InputDataReader.GetInputDataAsync<int>("Day01.txt");
 
             Part1(inputData);
             Part2(inputData);
